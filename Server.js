@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 mongoose
   .connect(
-    "mongodb+srv://lehoangduy:0901Lananh@cluster0.0aomf7p.mongodb.net/unicornsdb?retryWrites=true&w=majority"
+    "mongodb+srv:**********@cluster0.0aomf7p.mongodb.net/unicornsdb?retryWrites=true&w=majority"
   )
   .then(() => console.log(" MongoDB connected"))
   .catch((err) => console.error(" MongoDB connection error:", err));
