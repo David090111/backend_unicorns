@@ -102,7 +102,7 @@ const unicorns = [
 async function run() {
   try {
     await mongoose.connect(
-      "mongodb+srv://lehoangduy:0901Lananh@cluster0.0aomf7p.mongodb.net/unicornsdb?retryWrites=true&w=majority"
+      "mongodb+srv://*********@cluster0.0aomf7p.mongodb.net/unicornsdb?retryWrites=true&w=majority"
     );
 
     console.log(" Connected to MongoDB");
