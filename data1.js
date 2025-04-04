@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Unicorn = require("./models/Unicorn");
+require("dotenv").config();
 
 const unicorns = [
   {
@@ -101,10 +102,7 @@ const unicorns = [
 
 async function run() {
   try {
-    await mongoose.connect(
-      "mongodb+srv:lehoangduy:0901@cluster0.0aomf7p.mongodb.net/unicornsdb?retryWrites=true&w=majority" // we can you .env
-    );
-
+    await mongoose.connect(process.env.MONGO_URL);
     console.log(" Connected to MongoDB");
 
     const cleanedData = unicorns.map((u) => ({
